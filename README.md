@@ -7,9 +7,9 @@ Australia Facts runs from a Google Spreadsheet using [Google AppScript](https://
 The script expects a spreadsheet constructed as below:
 ![spreadsheet example](https://github.com/jasoneppink/australia-facts/blob/master/spreadsheet-sample.png)
 
-Image are created with ImageMagick using [pre-selected background images](https://github.com/jasoneppink/australia-facts/tree/master/images). A fact has a 1-in-6 chance of becoming an image, unless it contains a 2 or a 7, in which case it always becomes an image. (We were unsatisfied with the options for upside down 2s and 7s.)
+Images are created with ImageMagick using [pre-selected background images](https://github.com/jasoneppink/australia-facts/tree/master/images). A fact has a 1-in-6 chance of becoming an image, unless it contains a 2 or a 7, in which case it always becomes an image. (We were unsatisfied with the options for upside down 2s and 7s.)
 
-A cron job randomly publish facts inside a given timeframe.
+A cron job randomly runs the scripts twice a day inside a given timeframe.
 ```
 #between 11am and 12pm
 0 11 * * * perl -le 'sleep rand 3600' && php /DIRECTORY/TO/australiafacts.php
